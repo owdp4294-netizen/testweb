@@ -20,7 +20,7 @@ const state = {
     maintenanceMode: false,
 };
 
-const apiBaseUrl = "https://script.google.com/macros/s/AKfycbykTrYzohyyw2N0SACcJwO1UCn-xUD2QYMqKJXKVBhmSY1wW2IxUofDJDZqoiK4116N/exec";
+const apiBaseUrl = "https://script.google.com/macros/s/AKfycbyGyUJpiWvPYk1yMRby7nlgNMr0kuc7MVliCsWTnIvKK_1VSwTA4tcbEuRBZFde-Z84/exec";
 const productCategories = {
     netflix: "Netflix Premium",
     other: "แอพอื่น",
@@ -172,15 +172,15 @@ async function apiGet(action) {
 }
 
 async function apiPost(action, payload) {
-    const requestBody = JSON.stringify({ action, ...payload });
+    const params = new URLSearchParams({ action, ...payload });
     const response = await fetch(apiBaseUrl, {
         method: 'POST',
         mode: 'cors',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json;charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         },
-        body: requestBody,
+        body: params.toString(),
     });
     if (!response.ok) {
         const text = await response.text();
