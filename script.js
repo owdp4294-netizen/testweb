@@ -20,7 +20,7 @@ const state = {
     maintenanceMode: false,
 };
 
-const apiBaseUrl = "https://script.google.com/macros/s/AKfycbykTrYzohyyw2N0SACcJwO1UCn-xUD2QYMqKJXKVBhmSY1wW2IxUofDJDZqoiK4116N/exec";
+const apiBaseUrl = "https://script.google.com/macros/s/AKfycbx4RmprSd3o2KOoKGkAtl7dyUyOCLqPpI1MVHqEopkfBRIDZ0Mtkf_BzyrG2Oj2vxan/exec";
 const productCategories = {
     netflix: "Netflix Premium",
     other: "แอพอื่น",
